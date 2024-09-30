@@ -1,0 +1,47 @@
+Chef in his Office
+Recently Chef joined a new company. In this company, the employees have to work for 
+𝑋
+X hours each day from Monday to Thursday. Also, in this company, Friday is called Chill Day — employees only have to work for 
+𝑌
+Y hours 
+(
+𝑌
+<
+𝑋
+)
+(Y<X) on Friday. Saturdays and Sundays are holidays.
+
+Determine the total number of working hours in one week.
+
+Input Format
+The first line contains a single integer 
+𝑇
+T — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains two space-separated integers 
+𝑋
+X and 
+𝑌
+Y — the number of working hours on each day from Monday to Thursday and the number of working hours on Friday respectively.
+
+
+
+solution:-
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+	    for(int i=0;i<T;i++){
+	        int x=sc.nextInt();
+	        int y=sc.nextInt();
+	        int result=((x*4)+y);
+	        System.out.println(result);
+	    }
+	}
+}
