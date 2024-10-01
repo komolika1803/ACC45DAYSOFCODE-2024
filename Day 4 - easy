@@ -1,0 +1,52 @@
+The Three Topics
+The Chef has reached the finals of the Annual Inter-school Declamation contest.
+
+For the finals, students were asked to prepare 
+10
+10 topics. However, Chef was only able to prepare three topics, numbered 
+𝐴
+A, 
+𝐵
+B and 
+𝐶
+C — he is totally blank about the other topics. This means Chef can only win the contest if he gets the topics 
+𝐴
+A, 
+𝐵
+B or 
+𝐶
+C to speak about.
+
+On the contest day, Chef gets topic 
+𝑋
+X. Determine whether Chef has any chances of winning the competition.
+
+Print "Yes" if it is possible for Chef to win the contest, else print "No".
+
+
+solution:-
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		int x=sc.nextInt();
+			int y=sc.nextInt();
+				int z=sc.nextInt();
+					int a=sc.nextInt();
+					
+					if(a==x||a==y||a==z){
+					    System.out.println("Yes");
+					}
+					else{
+					    System.out.println("No");
+					}
+		
+
+	}
+}
