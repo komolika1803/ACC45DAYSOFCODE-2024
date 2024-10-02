@@ -1,0 +1,80 @@
+Elections in Chefland
+There are 
+101
+101 citizens in Chefland. It is election time in Chefland and 
+3
+3 parties, 
+𝐴
+,
+𝐵
+A,B, and 
+𝐶
+C are contesting the elections. Party 
+𝐴
+A receives 
+𝑋
+𝐴
+X 
+A
+​
+  votes, party 
+𝐵
+B receives 
+𝑋
+𝐵
+X 
+B
+​
+  votes, and party 
+𝐶
+C receives 
+𝑋
+𝐶
+X 
+C
+​
+  votes.
+
+The constitution of Chefland requires a particular party to receive a clear majority to form the government. A party is said to have a clear majority if it receives strictly greater than 
+50
+50 votes.
+
+If any party has a clear majority, print the winning party (A, B or C). Otherwise, print NOTA.
+
+
+Solution:-
+
+import java.util.Scanner;
+
+public class ElectionResult {
+    public static void main(String[] args) {
+        // Create a scanner object to take input
+        Scanner sc = new Scanner(System.in);
+        
+        // Input the number of test cases
+        int T = sc.nextInt();
+
+        // Loop through each test case
+        for (int t = 0; t < T; t++) {
+            // Input votes for party A, B, and C
+            int X_A = sc.nextInt();  // Votes for Party A
+            int X_B = sc.nextInt();  // Votes for Party B
+            int X_C = sc.nextInt();  // Votes for Party C
+
+            // Check if any party has more than 50 votes
+            if (X_A > 50) {
+                System.out.println("A");
+            } else if (X_B > 50) {
+                System.out.println("B");
+            } else if (X_C > 50) {
+                System.out.println("C");
+            } else {
+                System.out.println("NOTA");
+            }
+        }
+
+        // Close the scanner
+        sc.close();
+    }
+}
+
