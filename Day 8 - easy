@@ -1,0 +1,76 @@
+Monopoly
+There are 
+4
+4 companies in the markets of Chefland, 
+𝐴
+A, 
+𝐵
+B, 
+𝐶
+C, and 
+𝐷
+D.
+This year,
+
+Company 
+𝐴
+A made a profit of 
+𝑃
+P lakh rupees,
+Company 
+𝐵
+B made a profit of 
+𝑄
+Q lakh rupees,
+Company 
+𝐶
+C made a profit of 
+𝑅
+R lakh rupees,
+Company 
+𝐷
+D made a profit of 
+𝑆
+S lakh rupees.
+There is said to be a monopoly in the market if the profit made by one company is strictly greater than the sum of profits made by all other companies.
+Determine if there is a monopoly in the market or not.
+
+
+
+
+solution:
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static void main (String[] args) throws java.lang.Exception
+    {
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();  // Number of test cases
+        for (int i = 0; i < t; i++) {
+            int p = sc.nextInt();
+            int q = sc.nextInt();
+            int r = sc.nextInt();
+            int s = sc.nextInt();
+            
+            // Find the largest number
+            int max = Math.max(Math.max(p, q), Math.max(r, s));
+
+            // Calculate the sum of all numbers
+            int totalSum = p + q + r + s;
+
+            // Result is the difference between max and the sum of the other three numbers
+            int result = totalSum - max;
+
+            // Check if max is greater than the sum of the other three
+            if (max > result) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+    }
+}
