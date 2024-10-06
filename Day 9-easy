@@ -1,0 +1,35 @@
+The Cooler Dilemma 2
+The summer is at its peak in Chefland. Chef is planning to purchase a water cooler to keep his room cool. He has two options available:
+
+Rent a cooler at the cost of 
+𝑋
+X coins per month.
+Purchase a cooler for 
+𝑌
+Y coins.
+Chef wonders what is the maximum number of months for which he can rent the cooler such that the cost of renting is strictly less than the cost of purchasing it.
+
+
+solution:-
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t;  // Number of test cases
+    cin >> t;
+    
+    while (t--) {
+        int X, Y;
+        cin >> X >> Y;  // Input rent per month and purchase cost
+        
+        // Calculate the maximum number of months Chef can rent
+        int months = Y / X - 1;
+        
+        cout << months << endl;  // Output the result
+    }
+    
+    return 0;
+}
+
+
