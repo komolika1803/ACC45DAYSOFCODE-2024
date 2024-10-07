@@ -1,0 +1,43 @@
+Weights
+Chef is playing with weights. He has an object weighing 
+𝑊
+W units. He also has three weights each of 
+𝑋
+,
+𝑌
+,
+X,Y, and 
+𝑍
+Z units respectively. Help him determine whether he can measure the exact weight of the object with one or more of these weights.
+
+If it is possible to measure the weight of object with one or more of these weights, print YES, otherwise print NO.
+
+solution:
+
+#include <iostream>
+using namespace std;
+
+void can_measure_weight(int T) {
+    while (T--) {
+        int W, X, Y, Z;
+        cin >> W >> X >> Y >> Z;
+        
+        // Check all combinations of weights
+        if (W == X || W == Y || W == Z || 
+            W == X + Y || W == X + Z || W == Y + Z || 
+            W == X + Y + Z) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl;
+        }
+    }
+}
+
+int main() {
+    int T;
+    cin >> T;  // Number of test cases
+    
+    can_measure_weight(T);
+    
+    return 0;
+}
